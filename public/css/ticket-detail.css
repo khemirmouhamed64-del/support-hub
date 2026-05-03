@@ -1,0 +1,393 @@
+/* Dev links (PR & commits) */
+.dev-link-item {
+    padding: 3px 6px;
+    border-radius: 3px;
+    background: #f8f9fa;
+}
+.dev-link-item:hover {
+    background: #e9ecef;
+}
+.dev-link-item a { text-decoration: none; }
+.dev-link-item a:hover { text-decoration: underline; }
+
+/* Label selector */
+.label-badge { font-size: 0.75rem; font-weight: 400; }
+.label-color-dot {
+    display: inline-block;
+    width: 12px; height: 12px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+.label-option:hover { background: #f0f0f0; }
+.label-dropdown { box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+
+/* Collapsible description */
+.description-collapsed {
+    max-height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+.description-collapsed.has-overflow::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: linear-gradient(transparent, #f8f9fa);
+    pointer-events: none;
+}
+.description-expanded {
+    max-height: none !important;
+    overflow: visible !important;
+}
+.description-expanded::after { display: none !important; }
+
+/* Dev notes highlight for advanced states */
+.dev-notes-highlight {
+    border: 2px solid #f0ad4e;
+    box-shadow: 0 0 8px rgba(240, 173, 78, 0.3);
+}
+
+/* Comment actions (edit/delete) — show on hover */
+.comment-actions { opacity: 0; transition: opacity 0.15s; }
+.comment-item:hover .comment-actions { opacity: 1; }
+
+/* Contenteditable placeholder */
+[contenteditable=true]:empty:before {
+    content: attr(data-placeholder);
+    color: #adb5bd;
+    pointer-events: none;
+}
+
+/* Editable fields */
+.editable-field { cursor: pointer; }
+.editable-field:hover { background: #f0f0f0; border-radius: 3px; padding: 0 4px; }
+
+/* Ticket detail */
+.ticket-text-block h1 { font-size: 1.4rem; }
+.ticket-text-block h2 { font-size: 1.2rem; }
+.ticket-text-block h3 { font-size: 1.05rem; }
+.ticket-text-block h4 { font-size: 0.95rem; }
+.ticket-text-block h5, .ticket-text-block h6 { font-size: 0.85rem; }
+.ticket-text-block h1, .ticket-text-block h2, .ticket-text-block h3,
+.ticket-text-block h4, .ticket-text-block h5, .ticket-text-block h6 {
+    margin-top: 0.8rem;
+    margin-bottom: 0.4rem;
+}
+
+.ticket-text-block {
+    background: #f8f9fa;
+    border-radius: 4px;
+    padding: 10px 14px;
+    font-size: 0.88rem;
+    line-height: 1.6;
+}
+
+/* Priority badges */
+.badge-priority-critical { background: #e74c3c; color: #fff; }
+.badge-priority-high     { background: #f39c12; color: #fff; }
+.badge-priority-medium   { background: #3498db; color: #fff; }
+.badge-priority-low      { background: #95a5a6; color: #fff; }
+
+/* Attachments */
+.attachment-thumb {
+    width: 80px;
+    text-align: center;
+}
+.attachment-thumb img {
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 1px solid #dee2e6;
+}
+.attachment-thumb .video-thumb,
+.attachment-thumb .doc-thumb {
+    display: flex;
+    width: 80px;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+    background: #e9ecef;
+    border-radius: 4px;
+    font-size: 1.5rem;
+    color: #6c757d;
+}
+
+/* Comments */
+.comments-list {
+    height: 400px;
+    min-height: 80px;
+    max-height: 800px;
+    overflow-y: auto;
+    resize: vertical;
+}
+.comment-item {
+    padding: 8px 12px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+}
+/* Per-author color palette (soft pastels) */
+.comment-item.author-color-0 { background: #fff9e6; border-left: 3px solid #f0c040; } /* warm yellow */
+.comment-item.author-color-1 { background: #e8f4fd; border-left: 3px solid #5ba8d9; } /* sky blue */
+.comment-item.author-color-2 { background: #e8f8f0; border-left: 3px solid #52b788; } /* mint green */
+.comment-item.author-color-3 { background: #f3eefa; border-left: 3px solid #9b7dd4; } /* soft purple */
+.comment-item.author-color-4 { background: #fef0e6; border-left: 3px solid #e8875a; } /* peach */
+.comment-item.author-color-5 { background: #fce8ee; border-left: 3px solid #d9638a; } /* rose pink */
+.comment-item.author-color-6 { background: #e6f5f0; border-left: 3px solid #3da893; } /* teal */
+.comment-item.author-color-7 { background: #f0f0f8; border-left: 3px solid #7a82ab; } /* slate blue */
+.comment-body {
+    margin-top: 4px;
+    line-height: 1.5;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Client-source comments */
+.comment-item.source-client {
+    background: #e3f2fd;
+    border-left: 3px solid #2196F3;
+}
+.badge-client-source {
+    background: #2196F3;
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 2px 6px;
+    border-radius: 3px;
+}
+
+/* Comment attachments (legacy separate-attachment comments) */
+.comment-attachments {
+    border-top: 1px solid rgba(0,0,0,0.08);
+    padding-top: 6px;
+}
+.comment-att-thumb img {
+    width: 60px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 3px;
+    border: 1px solid #dee2e6;
+}
+.comment-att-file {
+    font-size: 0.78rem;
+    color: #495057;
+    text-decoration: none;
+    background: rgba(0,0,0,0.04);
+    padding: 2px 8px;
+    border-radius: 3px;
+    display: inline-block;
+}
+.comment-att-file:hover {
+    background: rgba(0,0,0,0.08);
+    text-decoration: none;
+    color: #212529;
+}
+
+/* Rich-text content in comments (Summernote HTML output) */
+.comment-body strong, .comment-body b { font-weight: 700; }
+.comment-body em, .comment-body i { font-style: italic; }
+.comment-body del, .comment-body s { text-decoration: line-through; opacity: 0.7; }
+.comment-body u { text-decoration: underline; }
+.comment-body a {
+    color: #0066cc;
+    text-decoration: underline;
+    word-break: break-all;
+}
+.comment-body a:hover { color: #004499; }
+.comment-body img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin: 4px 0;
+    cursor: pointer;
+}
+.comment-body ul, .comment-body ol {
+    margin: 4px 0;
+    padding-left: 22px;
+}
+.comment-body ul { list-style: disc; }
+.comment-body ol { list-style: decimal; }
+.comment-body li { margin-bottom: 2px; }
+.comment-body hr {
+    border: none;
+    border-top: 1px solid #dee2e6;
+    margin: 8px 0;
+}
+.comment-body code {
+    background: rgba(0,0,0,0.06);
+    padding: 1px 5px;
+    border-radius: 3px;
+    font-size: 0.82em;
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    color: #c7254e;
+}
+.comment-body pre {
+    background: #2d2d2d;
+    color: #f8f8f2;
+    padding: 10px 14px;
+    border-radius: 4px;
+    font-size: 0.82em;
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    overflow-x: auto;
+    margin: 6px 0;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+.comment-body pre code {
+    background: none;
+    color: inherit;
+    padding: 0;
+    font-size: inherit;
+}
+.comment-body blockquote {
+    border-left: 3px solid #dee2e6;
+    padding-left: 12px;
+    margin: 6px 0;
+    color: #6c757d;
+}
+.comment-body p {
+    margin: 0 0 4px;
+}
+.comment-body p:last-child {
+    margin-bottom: 0;
+}
+
+/* Legacy markdown classes (backward compat for old formatContent comments) */
+.comment-inline-code {
+    background: rgba(0,0,0,0.06);
+    padding: 1px 5px;
+    border-radius: 3px;
+    font-size: 0.82em;
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    color: #c7254e;
+}
+.comment-code-block {
+    background: #2d2d2d;
+    color: #f8f8f2;
+    padding: 10px 14px;
+    border-radius: 4px;
+    font-size: 0.82em;
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    overflow-x: auto;
+    margin: 6px 0;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+.comment-code-block code {
+    background: none;
+    color: inherit;
+    padding: 0;
+    font-size: inherit;
+}
+.comment-body ul.comment-list {
+    margin: 4px 0;
+    padding-left: 20px;
+    list-style: disc;
+}
+.comment-body ul.comment-list li { margin-bottom: 2px; }
+.comment-body ol.comment-list {
+    margin: 4px 0;
+    padding-left: 20px;
+    list-style: decimal;
+}
+.comment-body ol.comment-list li { margin-bottom: 2px; }
+
+/* Summernote editor overrides — compact style matching the page */
+.comment-form .note-editor {
+    border: 1px solid #ced4da !important;
+    border-radius: 6px !important;
+    overflow: hidden;
+    font-size: 0.85rem;
+}
+.comment-form .note-editor.note-frame .note-editing-area .note-editable {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    padding: 8px 12px;
+    background: #fff;
+}
+.comment-form .note-editor .note-toolbar {
+    background: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+    padding: 4px 6px;
+}
+.comment-form .note-editor .note-toolbar .note-btn {
+    padding: 4px 8px;
+    font-size: 0.78rem;
+    border-radius: 3px;
+}
+.comment-form .note-editor .note-statusbar {
+    background: #f8f9fa;
+    border-top: 1px solid #e9ecef;
+}
+.comment-form .note-editor .note-statusbar .note-resizebar {
+    border-top: none;
+    padding: 2px 0;
+}
+.comment-form .note-editor .note-editable img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin: 4px 0;
+}
+.comment-form .note-editor .note-placeholder {
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    color: #adb5bd;
+}
+
+/* Inline file links in comments (non-image attachments) */
+.comment-file-link {
+    display: inline-block;
+    background: #f0f2f5;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    padding: 3px 10px;
+    margin: 2px 0;
+    color: #495057;
+    text-decoration: none;
+    font-size: 0.82rem;
+    transition: background 0.15s;
+}
+.comment-file-link:hover {
+    background: #e2e6ea;
+    color: #212529;
+    text-decoration: none;
+}
+.comment-file-link i {
+    margin-right: 4px;
+    color: #6c757d;
+}
+
+/* Timeline */
+.timeline {
+    position: relative;
+    padding-left: 20px;
+}
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #dee2e6;
+}
+.timeline-item {
+    position: relative;
+    padding-bottom: 12px;
+}
+.timeline-dot {
+    position: absolute;
+    left: -20px;
+    top: 3px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+.timeline-content {
+    font-size: 0.82rem;
+}
